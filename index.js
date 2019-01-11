@@ -25,7 +25,6 @@ function flipCardToFace1 () {
         menu.className = "moveToRight";
         tab.innerText = "<";
      }
-     console.log(tab.innerText)
  }
 
  function addCard(){
@@ -50,29 +49,66 @@ function flipCardToFace1 () {
 
  var cardDesk = {
     activeCard : {
+        index : 0,
         question : "This is the question",
         answer : "This is the answer"
     },
-    card : {
-        question : "",
-        answer : ""
-    }
-
+    cards : [{question:"This is the question",answer:"This is the answer"}]
 }
 
+function addCardToCardDesk(q,a){
+    event.preventDefault();
+    const card = {
+        question : q.value,
+        answer: a.value
+    }
+
+    cardDesk.cards.push(card)
+    console.log(cardDesk.cards)
+
+}
 
 
 function nextCard(){
-    displayInfo()
+    console.log(cardDesk.activeCard.index)
+    if (cardDesk.activeCard.index >= cardDesk.cards.length-1){
+        alert("NO MORE CARDS TO THE RIGHT")
+    }else{
+        cardDesk.activeCard.index++
+        var i = cardDesk.activeCard.index
+
+        cardDesk.activeCard.question = cardDesk.cards[i].question
+        cardDesk.activeCard.answer = cardDesk.cards[i].answer
+        
+        displayInfo(cardDesk.cards[i])
+    }
 }
 
 function previousCard(){
-    displayInfo()
+    console.log(cardDesk.activeCard.index)
+    // think about there is no more cards left
+    if (cardDesk.activeCard.index<=0){
+        alert("NO MORE CARDS TO THE LEFT")
+    }else{
+        cardDesk.activeCard.index--
+        var i = cardDesk.activeCard.index
+
+        cardDesk.activeCard.question = cardDesk.cards[i].question
+        cardDesk.activeCard.answer = cardDesk.cards[i].answer
+        
+        displayInfo(cardDesk.cards[i])
+    }
+    
+    
+
+    // think about there is no more cards left
 }
 
-function displayInfo(){
+function displayInfo(card){
     var question = document.getElementById("question")
+
     question.innerText = cardDesk.activeCard.question
+    
 
     var answer = document.getElementById("answer")
     answer.innerText = cardDesk.activeCard.answer
@@ -80,13 +116,6 @@ function displayInfo(){
 
 
 
- function saveQuestion(){
-    var question = this
-    console.log(question.value)
- }
- function saveAnswer(){
-    var answer = this
-    console.log(answer.value)
- }
+displayInfo()
 
  

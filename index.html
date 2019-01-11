@@ -15,13 +15,16 @@
     <nav id="menu">
         <div id="cardDesk" class="container">
             <div class="input-wrapper">
-                <input type="text" placeholder="Type your question" onchange="saveQuestion.bind(this)()">  
-                <input type="text" placeholder="Type the answer" onchange="saveAnswer.bind(this)()">
+                <form onsubmit="addCardToCardDesk(question,answer)">
+                    <input type="text" name="question" placeholder="Type your question">  
+                    <input type="text" name="answer" placeholder="Type the answer">
+                    <button type="default">Save</button>
+                </form>
             </div>    
         </div>
-        <i class="fas fa-plus-circle" onclick="addCard()"></i>
         <div onclick="toggleMenu()" id="tab"><</div>
     </nav>
+
 
     <main>
         <div class="container">
@@ -39,8 +42,8 @@
     <footer>
         <div class="container">
             <div class="arrow-container">
-                <i class="fas fa-arrow-alt-circle-left" onclick="nextCard()"></i>
-                <i class="fas fa-arrow-alt-circle-right" onclick="previousCard()"></i>
+                <i class="fas fa-arrow-alt-circle-left" onclick="previousCard()"></i>
+                <i class="fas fa-arrow-alt-circle-right" onclick="nextCard()"></i>
             </div>  
         </div>
     </footer>
