@@ -33,11 +33,11 @@ function flipCardToFace1 () {
 
     var input1 = document.createElement("input")
     input1.type = "text"
-    input1.placeholder = "Type your question"
+    input1.placeholder = "Type your question here"
     
     var input2 = document.createElement("input")
     input2.type = "text"
-    input2.placeholder = "Type your answe"
+    input2.placeholder = "Type your answer here"
 
     inputwrapper.appendChild(input1)
     inputwrapper.appendChild(input2)
@@ -50,8 +50,8 @@ function flipCardToFace1 () {
  var cardDesk = {
     activeCard : {
         index : 0,
-        question : "This is the question",
-        answer : "This is the answer"
+        question : "Create your question",
+        answer : "and at it to your card deck."
     },
     cards : [{question:"This is the question",answer:"This is the answer"}]
 }
@@ -115,7 +115,5 @@ function displayInfo(card){
 }
 
 
-
-displayInfo()
 
  

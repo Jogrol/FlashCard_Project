@@ -1,26 +1,39 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: #C49799;
+}
 nav{
-    position: absolute;
-    width: 200px;
+    position: relative;
+    width: 230px;
     height: 100%;
     border: 1px solid black;
     z-index: 1;
-    padding-top: 24px;
-    background-color: antiquewhite;
+    padding-top:24px;
+    padding-right: 30px;
+    background-color:#7C90A0;
+ 
+    
 }
 
 #tab {
     position: absolute;
-    right: 1%;
-    top: 50%;
+    width: 100%;
+    font-size: 20px;
+    height: 100%;
+    text-align: right;
+    vertical-align: center;
+    padding-right: 12px;
+    
 }
 
+#tab:hover{
+    cursor: pointer;
+}
 .moveToLeft{
-    background-color: antiquewhite;
-    transform: translateX(-180px);
+    transform: translateX(-230px);
 }
 
 .moveToRight {
-    background-color: antiquewhite;
     transform: translateX(0px);
     
 }
@@ -31,7 +44,7 @@ nav{
     height: 200px;
     margin-left:25%;
     margin-right: 25%;
-    background-color: aqua;
+    background-color:#FFD972;
     position: relative;
 }
 
@@ -44,9 +57,16 @@ nav{
     align-items: center;
 }
 
-
+h1{
+    font-style: bold;
+    color:#FFD972;
+}
 
 .card:hover{
+    box-shadow: 10px 10px 5px grey;
+}
+
+nav:hover{
     box-shadow: 10px 10px 5px grey;
 }
 
@@ -71,8 +91,8 @@ p{
     margin: auto;
     border:1px solid black;
     border-radius: 5px;
+    background-color: whitesmoke;
 }
-
 input{
     width: 100%;
 }
@@ -92,4 +112,8 @@ input{
 .arrow-container{
     padding: 24px;
     font-size: 24px;
+}
+
+.fas:hover{
+    cursor: pointer;
 }
