@@ -7,14 +7,19 @@
     margin-right: 25%;
     background-color: aqua;
     position: relative;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.face{
- 
-    
+.card:hover{
+    background-color:white;
 }
 
 .hidden{
@@ -29,6 +34,6 @@ header{
 
 p{
     font-size: 1.3rem;
-
+    text-align: center;
 }
 
