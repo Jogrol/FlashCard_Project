@@ -48,24 +48,36 @@ function flipCardToFace1 () {
     cardDesk.appendChild(inputwrapper)
  }
 
- /*
- <div class="input-wrapper">
-     <input type="text" placeholder="Type your question"">  
-    <input type="text" placeholder="Type the answer"">
-</div>
-*/
-
-
-
-
-
  var cardDesk = {
-     card : {
-         question : "",
-         answer : ""
-     }
+    activeCard : {
+        question : "This is the question",
+        answer : "This is the answer"
+    },
+    card : {
+        question : "",
+        answer : ""
+    }
 
- }
+}
+
+
+
+function nextCard(){
+    displayInfo()
+}
+
+function previousCard(){
+    displayInfo()
+}
+
+function displayInfo(){
+    var question = document.getElementById("question")
+    question.innerText = cardDesk.activeCard.question
+
+    var answer = document.getElementById("answer")
+    answer.innerText = cardDesk.activeCard.answer
+}
+
 
 
  function saveQuestion(){
