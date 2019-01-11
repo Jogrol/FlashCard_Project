@@ -11,18 +11,21 @@ nav{
     padding-top:24px;
     padding-right: 30px;
     background-color:#7C90A0;
+    z-index: 0;
  
     
 }
 
 #tab {
     position: absolute;
-    width: 100%;
+    right: 0;
+    width: 20%;
     font-size: 20px;
     height: 100%;
     text-align: right;
     vertical-align: center;
     padding-right: 12px;
+    z-index: 1;
     
 }
 
