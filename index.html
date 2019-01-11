@@ -13,14 +13,13 @@
 <body>
     <header><h1>Flashcard game</h1></header>
     <nav id="menu">
-        <div class="container">
+        <div id="cardDesk" class="container">
             <div class="input-wrapper">
-                <input type="text" placeholder="Type your question">
-                <input type="text" placeholder="Type the answer">
-            </div>
-            <i class="fas fa-plus-circle"></i>
-            
+                <input type="text" placeholder="Type your question" onchange="saveQuestion.bind(this)()">  
+                <input type="text" placeholder="Type the answer" onchange="saveAnswer.bind(this)()">
+            </div>    
         </div>
+        <i class="fas fa-plus-circle" onclick="addCard()"></i>
         <div onclick="toggleMenu()" id="tab"><</div>
     </nav>
 

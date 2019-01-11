@@ -77,10 +77,14 @@ input{
     width: 100%;
 }
 
-.container{
+.container, .carddesk{
     text-align: center;
 }
 
 .fa-plus-circle{
     margin-top:24px;
+}
+
+#menu{
+    text-align: center;
 }

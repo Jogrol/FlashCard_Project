@@ -27,3 +27,54 @@ function flipCardToFace1 () {
      }
      console.log(tab.innerText)
  }
+
+ function addCard(){
+    var inputwrapper = document.createElement("div")
+    inputwrapper.className = "input-wrapper"
+
+    var input1 = document.createElement("input")
+    input1.type = "text"
+    input1.placeholder = "Type your question"
+    
+    var input2 = document.createElement("input")
+    input2.type = "text"
+    input2.placeholder = "Type your answe"
+
+    inputwrapper.appendChild(input1)
+    inputwrapper.appendChild(input2)
+
+    var cardDesk = document.getElementById("cardDesk")
+
+    cardDesk.appendChild(inputwrapper)
+ }
+
+ /*
+ <div class="input-wrapper">
+     <input type="text" placeholder="Type your question"">  
+    <input type="text" placeholder="Type the answer"">
+</div>
+*/
+
+
+
+
+
+ var cardDesk = {
+     card : {
+         question : "",
+         answer : ""
+     }
+
+ }
+
+
+ function saveQuestion(){
+    var question = this
+    console.log(question.value)
+ }
+ function saveAnswer(){
+    var answer = this
+    console.log(answer.value)
+ }
+
+ 
